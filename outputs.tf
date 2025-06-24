@@ -15,3 +15,10 @@ output "flask_url" {
 output "express_url" {
   value = "http://${aws_instance.express_instance.public_ip}:3000"
 }
+output "flask_ecr_url" {
+  value = aws_ecr_repository.flask_repo.repository_url
+}
+
+output "express_ecr_url" {
+  value = aws_ecr_repository.express_repo.repository_url
+}
