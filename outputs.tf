@@ -22,3 +22,7 @@ output "flask_ecr_url" {
 output "express_ecr_url" {
   value = aws_ecr_repository.express_repo.repository_url
 }
+output "alb_dns" {
+  description = "ALB DNS name"
+  value       = aws_lb.app_alb.dns_name
+}

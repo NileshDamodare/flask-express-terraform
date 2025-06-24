@@ -24,8 +24,14 @@ variable "allowed_ip" {
   type        = string
   default     = "103.184.87.224/32"
 }
+
 variable "subnet_id" {
   description = "Subnet ID to launch instances"
   type        = string
-  default     = "subnet-095bc8490d2c419ca"   # Changed to ap-south-1a subnet
+  default     = "subnet-095bc8490d2c419ca"
+}
+
+variable "subnet_ids" {
+  description = "List of public subnet IDs for ECS tasks"
+  type        = list(string)
 }
